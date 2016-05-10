@@ -7,21 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D47A4E61CE16E9C00D8C33A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D47A4E51CE16E9C00D8C33A /* AppDelegate.swift */; };
-		0D47A4E81CE16E9C00D8C33A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D47A4E71CE16E9C00D8C33A /* ViewController.swift */; };
-		0D47A4EB1CE16E9C00D8C33A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D47A4E91CE16E9C00D8C33A /* Main.storyboard */; };
-		0D47A4ED1CE16E9C00D8C33A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D47A4EC1CE16E9C00D8C33A /* Assets.xcassets */; };
-		0D47A4F01CE16E9C00D8C33A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D47A4EE1CE16E9C00D8C33A /* LaunchScreen.storyboard */; };
+		0D444C1E1CE17348007E9079 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D444C061CE17348007E9079 /* AppDelegate.swift */; };
+		0D444C1F1CE17348007E9079 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D444C1C1CE17348007E9079 /* Info.plist */; };
+		0D444C201CE17348007E9079 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D444C1D1CE17348007E9079 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D444C061CE17348007E9079 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0D444C1C1CE17348007E9079 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D444C1D1CE17348007E9079 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D47A4E21CE16E9C00D8C33A /* SinaWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SinaWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0D47A4E51CE16E9C00D8C33A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0D47A4E71CE16E9C00D8C33A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0D47A4EA1CE16E9C00D8C33A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0D47A4EC1CE16E9C00D8C33A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0D47A4EF1CE16E9C00D8C33A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0D47A4F11CE16E9C00D8C33A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +30,191 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D444C041CE17348007E9079 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				0D444C061CE17348007E9079 /* AppDelegate.swift */,
+				0D444C051CE17348007E9079 /* Extension */,
+				0D444C071CE17348007E9079 /* Library */,
+				0D444C081CE17348007E9079 /* Model */,
+				0D444C091CE17348007E9079 /* Module */,
+				0D444C1A1CE17348007E9079 /* Tool */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		0D444C051CE17348007E9079 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		0D444C071CE17348007E9079 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		0D444C081CE17348007E9079 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0D444C091CE17348007E9079 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				0D444C0A1CE17348007E9079 /* Discovery */,
+				0D444C0E1CE17348007E9079 /* Home */,
+				0D444C121CE17348007E9079 /* Message */,
+				0D444C161CE17348007E9079 /* Profile */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		0D444C0A1CE17348007E9079 /* Discovery */ = {
+			isa = PBXGroup;
+			children = (
+				0D444C0B1CE17348007E9079 /* Controller */,
+				0D444C0C1CE17348007E9079 /* Model */,
+				0D444C0D1CE17348007E9079 /* View */,
+			);
+			path = Discovery;
+			sourceTree = "<group>";
+		};
+		0D444C0B1CE17348007E9079 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0D444C0C1CE17348007E9079 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0D444C0D1CE17348007E9079 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0D444C0E1CE17348007E9079 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0D444C0F1CE17348007E9079 /* Controller */,
+				0D444C101CE17348007E9079 /* Model */,
+				0D444C111CE17348007E9079 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0D444C0F1CE17348007E9079 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0D444C101CE17348007E9079 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0D444C111CE17348007E9079 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0D444C121CE17348007E9079 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				0D444C131CE17348007E9079 /* Controller */,
+				0D444C141CE17348007E9079 /* Model */,
+				0D444C151CE17348007E9079 /* View */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		0D444C131CE17348007E9079 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0D444C141CE17348007E9079 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0D444C151CE17348007E9079 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0D444C161CE17348007E9079 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				0D444C171CE17348007E9079 /* Controller */,
+				0D444C181CE17348007E9079 /* Model */,
+				0D444C191CE17348007E9079 /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		0D444C171CE17348007E9079 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0D444C181CE17348007E9079 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0D444C191CE17348007E9079 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0D444C1A1CE17348007E9079 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		0D444C1B1CE17348007E9079 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				0D444C1C1CE17348007E9079 /* Info.plist */,
+				0D444C1D1CE17348007E9079 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		0D47A4D91CE16E9C00D8C33A = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +234,8 @@
 		0D47A4E41CE16E9C00D8C33A /* SinaWeiBo */ = {
 			isa = PBXGroup;
 			children = (
-				0D47A4E51CE16E9C00D8C33A /* AppDelegate.swift */,
-				0D47A4E71CE16E9C00D8C33A /* ViewController.swift */,
-				0D47A4E91CE16E9C00D8C33A /* Main.storyboard */,
-				0D47A4EC1CE16E9C00D8C33A /* Assets.xcassets */,
-				0D47A4EE1CE16E9C00D8C33A /* LaunchScreen.storyboard */,
-				0D47A4F11CE16E9C00D8C33A /* Info.plist */,
+				0D444C041CE17348007E9079 /* Class */,
+				0D444C1B1CE17348007E9079 /* Resource */,
 			);
 			path = SinaWeiBo;
 			sourceTree = "<group>";
@@ -122,9 +298,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D47A4F01CE16E9C00D8C33A /* LaunchScreen.storyboard in Resources */,
-				0D47A4ED1CE16E9C00D8C33A /* Assets.xcassets in Resources */,
-				0D47A4EB1CE16E9C00D8C33A /* Main.storyboard in Resources */,
+				0D444C201CE17348007E9079 /* Assets.xcassets in Resources */,
+				0D444C1F1CE17348007E9079 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,31 +310,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D47A4E81CE16E9C00D8C33A /* ViewController.swift in Sources */,
-				0D47A4E61CE16E9C00D8C33A /* AppDelegate.swift in Sources */,
+				0D444C1E1CE17348007E9079 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		0D47A4E91CE16E9C00D8C33A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0D47A4EA1CE16E9C00D8C33A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		0D47A4EE1CE16E9C00D8C33A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0D47A4EF1CE16E9C00D8C33A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0D47A4F21CE16E9C00D8C33A /* Debug */ = {
@@ -251,10 +406,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = SinaWeiBo/Info.plist;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				INFOPLIST_FILE = "$(SRCROOT)/SinaWeiBo/Resource/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.HQL.SinaWeiBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -262,10 +420,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = SinaWeiBo/Info.plist;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				INFOPLIST_FILE = "$(SRCROOT)/SinaWeiBo/Resource/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.HQL.SinaWeiBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -288,6 +449,7 @@
 				0D47A4F61CE16E9C00D8C33A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
