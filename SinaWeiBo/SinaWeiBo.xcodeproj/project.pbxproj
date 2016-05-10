@@ -15,6 +15,7 @@
 		0DA74E351CE1C55D003BB9A2 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA74E341CE1C55D003BB9A2 /* HomeController.swift */; };
 		0DA74E371CE1C56E003BB9A2 /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA74E361CE1C56E003BB9A2 /* MessageController.swift */; };
 		0DA74E391CE1C57E003BB9A2 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA74E381CE1C57E003BB9A2 /* ProfileController.swift */; };
+		0DA74E511CE20BDF003BB9A2 /* HQLTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA74E501CE20BDF003BB9A2 /* HQLTabBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		0DA74E341CE1C55D003BB9A2 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		0DA74E361CE1C56E003BB9A2 /* MessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
 		0DA74E381CE1C57E003BB9A2 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		0DA74E501CE20BDF003BB9A2 /* HQLTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQLTabBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +285,7 @@
 		0DA74E2B1CE1C45B003BB9A2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0DA74E501CE20BDF003BB9A2 /* HQLTabBarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 			files = (
 				0DA74E331CE1C52B003BB9A2 /* DiscoveryController.swift in Sources */,
 				0D444C1E1CE17348007E9079 /* AppDelegate.swift in Sources */,
+				0DA74E511CE20BDF003BB9A2 /* HQLTabBarView.swift in Sources */,
 				0DA74E371CE1C56E003BB9A2 /* MessageController.swift in Sources */,
 				0DA74E2D1CE1C4AB003BB9A2 /* HQLTabBarController.swift in Sources */,
 				0DA74E351CE1C55D003BB9A2 /* HomeController.swift in Sources */,

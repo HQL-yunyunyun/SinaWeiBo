@@ -15,8 +15,16 @@ class HQLTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 指定tabBar
+        let mainTabBar = HQLTabBarView()
+        
+        // tabBar是只读属性->只实现了get方法，没有实现set方法，不能直接用=赋值
+        // 使用kvc的方法赋值，KVC会先去找set方法如果没有set方法会找_tabBar成员变量,KVC使用运行时
+//        tabBar = mainTabBar
+        self.setValue(mainTabBar, forKeyPath: "tabBar")
 
-        // Do any additional setup after loading the view.
+        // 设置子控制器
         setupSubview()
     }
     
