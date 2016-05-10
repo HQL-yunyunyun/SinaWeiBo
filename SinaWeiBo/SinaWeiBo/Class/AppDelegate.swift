@@ -18,9 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UIScreen.mainScreen().bounds
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        window?.backgroundColor = UIColor.redColor()
         
-        window?.rootViewController = UIViewController()
+        
+        let tabBarVC = HQLTabBarController()
+        tabBarVC.view.backgroundColor = UIColor.whiteColor()
+        
+        window?.rootViewController = tabBarVC
+        
         
         window?.makeKeyAndVisible()
         

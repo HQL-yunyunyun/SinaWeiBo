@@ -10,6 +10,11 @@
 		0D444C1E1CE17348007E9079 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D444C061CE17348007E9079 /* AppDelegate.swift */; };
 		0D444C1F1CE17348007E9079 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D444C1C1CE17348007E9079 /* Info.plist */; };
 		0D444C201CE17348007E9079 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D444C1D1CE17348007E9079 /* Assets.xcassets */; };
+		0DA74E2D1CE1C4AB003BB9A2 /* HQLTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA74E2C1CE1C4AB003BB9A2 /* HQLTabBarController.swift */; };
+		0DA74E331CE1C52B003BB9A2 /* DiscoveryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA74E321CE1C52B003BB9A2 /* DiscoveryController.swift */; };
+		0DA74E351CE1C55D003BB9A2 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA74E341CE1C55D003BB9A2 /* HomeController.swift */; };
+		0DA74E371CE1C56E003BB9A2 /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA74E361CE1C56E003BB9A2 /* MessageController.swift */; };
+		0DA74E391CE1C57E003BB9A2 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA74E381CE1C57E003BB9A2 /* ProfileController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +22,11 @@
 		0D444C1C1CE17348007E9079 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D444C1D1CE17348007E9079 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D47A4E21CE16E9C00D8C33A /* SinaWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SinaWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DA74E2C1CE1C4AB003BB9A2 /* HQLTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQLTabBarController.swift; sourceTree = "<group>"; };
+		0DA74E321CE1C52B003BB9A2 /* DiscoveryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryController.swift; sourceTree = "<group>"; };
+		0DA74E341CE1C55D003BB9A2 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		0DA74E361CE1C56E003BB9A2 /* MessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
+		0DA74E381CE1C57E003BB9A2 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,9 +77,10 @@
 		0D444C091CE17348007E9079 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				0D444C0A1CE17348007E9079 /* Discovery */,
+				0DA74E281CE1C449003BB9A2 /* Main */,
 				0D444C0E1CE17348007E9079 /* Home */,
 				0D444C121CE17348007E9079 /* Message */,
+				0D444C0A1CE17348007E9079 /* Discovery */,
 				0D444C161CE17348007E9079 /* Profile */,
 			);
 			path = Module;
@@ -88,6 +99,7 @@
 		0D444C0B1CE17348007E9079 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0DA74E321CE1C52B003BB9A2 /* DiscoveryController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -119,6 +131,7 @@
 		0D444C0F1CE17348007E9079 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0DA74E341CE1C55D003BB9A2 /* HomeController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -150,6 +163,7 @@
 		0D444C131CE17348007E9079 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0DA74E361CE1C56E003BB9A2 /* MessageController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -181,6 +195,7 @@
 		0D444C171CE17348007E9079 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0DA74E381CE1C57E003BB9A2 /* ProfileController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -238,6 +253,38 @@
 				0D444C1B1CE17348007E9079 /* Resource */,
 			);
 			path = SinaWeiBo;
+			sourceTree = "<group>";
+		};
+		0DA74E281CE1C449003BB9A2 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0DA74E291CE1C45B003BB9A2 /* Controller */,
+				0DA74E2A1CE1C45B003BB9A2 /* Model */,
+				0DA74E2B1CE1C45B003BB9A2 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		0DA74E291CE1C45B003BB9A2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0DA74E2C1CE1C4AB003BB9A2 /* HQLTabBarController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0DA74E2A1CE1C45B003BB9A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0DA74E2B1CE1C45B003BB9A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,7 +357,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DA74E331CE1C52B003BB9A2 /* DiscoveryController.swift in Sources */,
 				0D444C1E1CE17348007E9079 /* AppDelegate.swift in Sources */,
+				0DA74E371CE1C56E003BB9A2 /* MessageController.swift in Sources */,
+				0DA74E2D1CE1C4AB003BB9A2 /* HQLTabBarController.swift in Sources */,
+				0DA74E351CE1C55D003BB9A2 /* HomeController.swift in Sources */,
+				0DA74E391CE1C57E003BB9A2 /* ProfileController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
