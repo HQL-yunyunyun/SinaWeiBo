@@ -1,0 +1,15 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '8.0'
+# Uncomment this line if you're using Swift
+# use_frameworks! 使用动态库 Swift添加第三方框架只能添加动态库
+
+use_frameworks! 
+platform :ios, '8.0'
+pod 'AFNetworking'
+pod 'SDWebImage'
+pod 'SVProgressHUD'
+pod 'SnapKit', '0.19.1'
+
+#pod install --verbose 可以看到详细信息
+#--no-repo-update 不要去同步远程仓库，直接使用本地仓库
+

@@ -23,7 +23,10 @@ class HQLTabBarController: UITabBarController {
         // 使用kvc的方法赋值，KVC会先去找set方法如果没有set方法会找_tabBar成员变量,KVC使用运行时
 //        tabBar = mainTabBar
         self.setValue(mainTabBar, forKeyPath: "tabBar")
-
+        mainTabBar.composeCallback = {
+            print("点击了我")
+            
+        }
         // 设置子控制器
         setupSubview()
     }

@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIScreen.mainScreen().bounds
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
+        // 给navigation设置皮肤
+        setupAppearance()
         
         let tabBarVC = HQLTabBarController()
         tabBarVC.view.backgroundColor = UIColor.whiteColor()
@@ -29,6 +31,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         return true
+    }
+    // 给navigation 设置皮肤
+    func setupAppearance(){
+        let bar = UINavigationBar.appearance()
+        bar.tintColor = UIColor.orangeColor()
     }
 
     func applicationWillResignActive(application: UIApplication) {

@@ -28,7 +28,7 @@ class HQLTabBarView: UITabBar {
         // 宽度
         let width = self.frame.width / 5
         for view in subviews{
-            print(view)
+//            print(view)
             // 判断view的类型
             // UITabBarButton是系统隐藏的类 无法调用这个类的方法 [UITabBarButton class]
             // NSClassFromString("UITabBarButton") = [UITabBarButton class]
