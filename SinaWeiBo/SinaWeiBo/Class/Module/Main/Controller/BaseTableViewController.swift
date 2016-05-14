@@ -52,7 +52,13 @@ extension BaseTableViewController: visitorViewDelegate{
     // 实现协议方法
     // 登录
     func visitorViewDidClickLogin() {
-        CZPrint(items: "登录")
+//        CZPrint(items: "登录")
+        
+        // modal 出一个控制器
+        let oauthVC = HQLOauthViewController()
+        
+        let nav: UINavigationController = UINavigationController(rootViewController: oauthVC)
+        self.presentViewController(nav, animated: true, completion: nil)
     }
     // 注册
     func visitorViewDidClickRegister() {
