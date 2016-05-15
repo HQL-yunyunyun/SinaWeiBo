@@ -32,6 +32,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
+    /// 让别人来切换window的根控制器
+    func switchRootViewController(controller: UIViewController) {
+        // 将传入的控制器设置给window的根控制器
+        window?.rootViewController = controller
+    }
+    
     // 给navigation 设置皮肤
     func setupAppearance(){
         let bar = UINavigationBar.appearance()

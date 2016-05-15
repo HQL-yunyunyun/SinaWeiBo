@@ -11,6 +11,7 @@
 		0D444C1E1CE17348007E9079 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D444C061CE17348007E9079 /* AppDelegate.swift */; };
 		0D444C1F1CE17348007E9079 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D444C1C1CE17348007E9079 /* Info.plist */; };
 		0D444C201CE17348007E9079 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D444C1D1CE17348007E9079 /* Assets.xcassets */; };
+		0D554FFC1CE81191004EFDFD /* HQLNewFeatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D554FFB1CE81191004EFDFD /* HQLNewFeatureController.swift */; };
 		0DA74E2D1CE1C4AB003BB9A2 /* HQLTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA74E2C1CE1C4AB003BB9A2 /* HQLTabBarController.swift */; };
 		0DA74E331CE1C52B003BB9A2 /* DiscoveryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA74E321CE1C52B003BB9A2 /* DiscoveryController.swift */; };
 		0DA74E351CE1C55D003BB9A2 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA74E341CE1C55D003BB9A2 /* HomeController.swift */; };
@@ -19,6 +20,7 @@
 		0DA74E511CE20BDF003BB9A2 /* HQLTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA74E501CE20BDF003BB9A2 /* HQLTabBarView.swift */; };
 		0DC55DAC1CE7099E003613FF /* HQLUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC55DAB1CE7099E003613FF /* HQLUserAccount.swift */; };
 		0DC55DAF1CE70EC6003613FF /* HQLUserAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC55DAE1CE70EC6003613FF /* HQLUserAccountViewModel.swift */; };
+		0DC55DB51CE72573003613FF /* HQLWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC55DB41CE72573003613FF /* HQLWelcomeViewController.swift */; };
 		0DD738371CE5F21D0002EE51 /* HQLOauthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD738361CE5F21D0002EE51 /* HQLOauthViewController.swift */; };
 		0DDEFB201CE45C2B00723FD0 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDEFB1F1CE45C2B00723FD0 /* BaseTableViewController.swift */; };
 		0DDEFB221CE4602100723FD0 /* visitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDEFB211CE4602100723FD0 /* visitorView.swift */; };
@@ -32,6 +34,7 @@
 		0D444C1C1CE17348007E9079 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D444C1D1CE17348007E9079 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D47A4E21CE16E9C00D8C33A /* SinaWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SinaWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D554FFB1CE81191004EFDFD /* HQLNewFeatureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQLNewFeatureController.swift; sourceTree = "<group>"; };
 		0DA74E2C1CE1C4AB003BB9A2 /* HQLTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQLTabBarController.swift; sourceTree = "<group>"; };
 		0DA74E321CE1C52B003BB9A2 /* DiscoveryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryController.swift; sourceTree = "<group>"; };
 		0DA74E341CE1C55D003BB9A2 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		0DA74E501CE20BDF003BB9A2 /* HQLTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQLTabBarView.swift; sourceTree = "<group>"; };
 		0DC55DAB1CE7099E003613FF /* HQLUserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQLUserAccount.swift; sourceTree = "<group>"; };
 		0DC55DAE1CE70EC6003613FF /* HQLUserAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQLUserAccountViewModel.swift; sourceTree = "<group>"; };
+		0DC55DB41CE72573003613FF /* HQLWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQLWelcomeViewController.swift; sourceTree = "<group>"; };
 		0DD738361CE5F21D0002EE51 /* HQLOauthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQLOauthViewController.swift; sourceTree = "<group>"; };
 		0DDEFB1F1CE45C2B00723FD0 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		0DDEFB211CE4602100723FD0 /* visitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = visitorView.swift; sourceTree = "<group>"; };
@@ -101,23 +105,25 @@
 		0D444C091CE17348007E9079 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				0DA74E281CE1C449003BB9A2 /* Main */,
-				0DD738321CE5F0CC0002EE51 /* Oauth */,
-				0D444C0E1CE17348007E9079 /* Home */,
-				0D444C121CE17348007E9079 /* Message */,
-				0D444C0A1CE17348007E9079 /* Discovery */,
-				0D444C161CE17348007E9079 /* Profile */,
+				0DC55DB01CE724CF003613FF /* NewFeature(新特性) */,
+				0DA74E281CE1C449003BB9A2 /* Main(主要-基础控制器) */,
+				0DD738321CE5F0CC0002EE51 /* Oauth(授权页面) */,
+				0D444C0E1CE17348007E9079 /* Home(首页) */,
+				0D444C121CE17348007E9079 /* Message(消息) */,
+				0D444C0A1CE17348007E9079 /* Discovery(发现页面) */,
+				0D444C161CE17348007E9079 /* Profile(我的页面) */,
 			);
 			path = Module;
 			sourceTree = "<group>";
 		};
-		0D444C0A1CE17348007E9079 /* Discovery */ = {
+		0D444C0A1CE17348007E9079 /* Discovery(发现页面) */ = {
 			isa = PBXGroup;
 			children = (
 				0D444C0B1CE17348007E9079 /* Controller */,
 				0D444C0C1CE17348007E9079 /* Model */,
 				0D444C0D1CE17348007E9079 /* View */,
 			);
+			name = "Discovery(发现页面)";
 			path = Discovery;
 			sourceTree = "<group>";
 		};
@@ -143,13 +149,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		0D444C0E1CE17348007E9079 /* Home */ = {
+		0D444C0E1CE17348007E9079 /* Home(首页) */ = {
 			isa = PBXGroup;
 			children = (
 				0D444C0F1CE17348007E9079 /* Controller */,
 				0D444C101CE17348007E9079 /* Model */,
 				0D444C111CE17348007E9079 /* View */,
 			);
+			name = "Home(首页)";
 			path = Home;
 			sourceTree = "<group>";
 		};
@@ -175,13 +182,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		0D444C121CE17348007E9079 /* Message */ = {
+		0D444C121CE17348007E9079 /* Message(消息) */ = {
 			isa = PBXGroup;
 			children = (
 				0D444C131CE17348007E9079 /* Controller */,
 				0D444C141CE17348007E9079 /* Model */,
 				0D444C151CE17348007E9079 /* View */,
 			);
+			name = "Message(消息)";
 			path = Message;
 			sourceTree = "<group>";
 		};
@@ -207,13 +215,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		0D444C161CE17348007E9079 /* Profile */ = {
+		0D444C161CE17348007E9079 /* Profile(我的页面) */ = {
 			isa = PBXGroup;
 			children = (
 				0D444C171CE17348007E9079 /* Controller */,
 				0D444C181CE17348007E9079 /* Model */,
 				0D444C191CE17348007E9079 /* View */,
 			);
+			name = "Profile(我的页面)";
 			path = Profile;
 			sourceTree = "<group>";
 		};
@@ -283,13 +292,14 @@
 			path = SinaWeiBo;
 			sourceTree = "<group>";
 		};
-		0DA74E281CE1C449003BB9A2 /* Main */ = {
+		0DA74E281CE1C449003BB9A2 /* Main(主要-基础控制器) */ = {
 			isa = PBXGroup;
 			children = (
 				0DA74E291CE1C45B003BB9A2 /* Controller */,
 				0DA74E2A1CE1C45B003BB9A2 /* Model */,
 				0DA74E2B1CE1C45B003BB9A2 /* View */,
 			);
+			name = "Main(主要-基础控制器)";
 			path = Main;
 			sourceTree = "<group>";
 		};
@@ -326,13 +336,48 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		0DD738321CE5F0CC0002EE51 /* Oauth */ = {
+		0DC55DB01CE724CF003613FF /* NewFeature(新特性) */ = {
+			isa = PBXGroup;
+			children = (
+				0DC55DB11CE724CF003613FF /* Model */,
+				0DC55DB21CE724CF003613FF /* Controller */,
+				0DC55DB31CE724CF003613FF /* View */,
+			);
+			name = "NewFeature(新特性)";
+			path = NewFeature;
+			sourceTree = "<group>";
+		};
+		0DC55DB11CE724CF003613FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0DC55DB41CE72573003613FF /* HQLWelcomeViewController.swift */,
+				0D554FFB1CE81191004EFDFD /* HQLNewFeatureController.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0DC55DB21CE724CF003613FF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0DC55DB31CE724CF003613FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0DD738321CE5F0CC0002EE51 /* Oauth(授权页面) */ = {
 			isa = PBXGroup;
 			children = (
 				0DD738341CE5F0CC0002EE51 /* Controller */,
 				0DD738331CE5F0CC0002EE51 /* Model */,
 				0DD738351CE5F0CC0002EE51 /* View */,
 			);
+			name = "Oauth(授权页面)";
 			path = Oauth;
 			sourceTree = "<group>";
 		};
@@ -503,6 +548,7 @@
 				0DD738371CE5F21D0002EE51 /* HQLOauthViewController.swift in Sources */,
 				0DDEFB201CE45C2B00723FD0 /* BaseTableViewController.swift in Sources */,
 				0DA74E511CE20BDF003BB9A2 /* HQLTabBarView.swift in Sources */,
+				0D554FFC1CE81191004EFDFD /* HQLNewFeatureController.swift in Sources */,
 				0DC55DAC1CE7099E003613FF /* HQLUserAccount.swift in Sources */,
 				0DDEFB221CE4602100723FD0 /* visitorView.swift in Sources */,
 				0DA74E371CE1C56E003BB9A2 /* MessageController.swift in Sources */,
@@ -510,6 +556,7 @@
 				0DC55DAF1CE70EC6003613FF /* HQLUserAccountViewModel.swift in Sources */,
 				0DA74E351CE1C55D003BB9A2 /* HomeController.swift in Sources */,
 				0DA74E391CE1C57E003BB9A2 /* ProfileController.swift in Sources */,
+				0DC55DB51CE72573003613FF /* HQLWelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
