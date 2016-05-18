@@ -122,18 +122,19 @@ class HQLUserAccountViewModel: NSObject {
             return
         }
         // 到这个地方，token和uid都由值
-        let urlString = "2/users/show.json"
+        let urlString = "https://api.weibo.com/2/users/show.json"
         let parametes = [
             "access_token": access_token,
             "uid": uid
         ]
+        CZPrint(items: "\(parametes)")
         
         // 请求
         HQLNetWorkTool.shareInstance.request(RequestMethod.GET, URLString: urlString, parameters: parametes, success: { (_, responseObject) in
             // 获取信息 转换成字典
-            if let result = responseObject as? [String: AnyObject?]{
-                    let screen_name = result["screen_name"] as? String
-                    let avatar_large = result["avatar_large"] as? String
+            if let result = responseObject as? [String: AnyObject]{
+                let screen_name = result["screen_name"] as? String
+                let avatar_large = result["avatar_large"] as? String
                 
                 // 赋值到当前账号
                 self.userAccount?.screen_name = screen_name
@@ -141,6 +142,8 @@ class HQLUserAccountViewModel: NSObject {
                 
                 self.saveUserAccount()
                 loadUserInfoCallBack()
+            }else{
+                CZPrint(items: "获取用户数据失败")
             }
             
             }) { (_, error) in

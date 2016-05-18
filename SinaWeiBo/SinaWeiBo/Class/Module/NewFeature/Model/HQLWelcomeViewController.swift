@@ -139,6 +139,8 @@ class HQLWelcomeViewController: UIViewController {
         label.font = UIFont.systemFontOfSize(15)
         label.sizeToFit()
         
+        label.alpha = 0
+        
         return label
     }()
 }

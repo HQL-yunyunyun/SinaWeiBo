@@ -15,6 +15,10 @@
 		0D444C201CE17348007E9079 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D444C1D1CE17348007E9079 /* Assets.xcassets */; };
 		0D4EEDFD1CE89CC700FA74EB /* HQLNewFeatureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4EEDFC1CE89CC700FA74EB /* HQLNewFeatureCell.swift */; };
 		0D554FFC1CE81191004EFDFD /* HQLNewFeatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D554FFB1CE81191004EFDFD /* HQLNewFeatureController.swift */; };
+		0D5A546F1CEC8A03009DACE4 /* HQLStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5A546E1CEC8A03009DACE4 /* HQLStatus.swift */; };
+		0D5A54711CEC8F77009DACE4 /* HQLUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5A54701CEC8F77009DACE4 /* HQLUser.swift */; };
+		0D5A54731CEC9258009DACE4 /* HQLStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5A54721CEC9258009DACE4 /* HQLStatusViewModel.swift */; };
+		0D5A54751CECA03A009DACE4 /* HQLStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5A54741CECA03A009DACE4 /* HQLStatusCell.swift */; };
 		0DA74E2D1CE1C4AB003BB9A2 /* HQLTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA74E2C1CE1C4AB003BB9A2 /* HQLTabBarController.swift */; };
 		0DA74E331CE1C52B003BB9A2 /* DiscoveryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA74E321CE1C52B003BB9A2 /* DiscoveryController.swift */; };
 		0DA74E351CE1C55D003BB9A2 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA74E341CE1C55D003BB9A2 /* HomeController.swift */; };
@@ -41,6 +45,10 @@
 		0D47A4E21CE16E9C00D8C33A /* SinaWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SinaWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D4EEDFC1CE89CC700FA74EB /* HQLNewFeatureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQLNewFeatureCell.swift; sourceTree = "<group>"; };
 		0D554FFB1CE81191004EFDFD /* HQLNewFeatureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQLNewFeatureController.swift; sourceTree = "<group>"; };
+		0D5A546E1CEC8A03009DACE4 /* HQLStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQLStatus.swift; sourceTree = "<group>"; };
+		0D5A54701CEC8F77009DACE4 /* HQLUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQLUser.swift; sourceTree = "<group>"; };
+		0D5A54721CEC9258009DACE4 /* HQLStatusViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQLStatusViewModel.swift; sourceTree = "<group>"; };
+		0D5A54741CECA03A009DACE4 /* HQLStatusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQLStatusCell.swift; sourceTree = "<group>"; };
 		0DA74E2C1CE1C4AB003BB9A2 /* HQLTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQLTabBarController.swift; sourceTree = "<group>"; };
 		0DA74E321CE1C52B003BB9A2 /* DiscoveryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryController.swift; sourceTree = "<group>"; };
 		0DA74E341CE1C55D003BB9A2 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -105,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				0DC55DAB1CE7099E003613FF /* HQLUserAccount.swift */,
+				0D5A546E1CEC8A03009DACE4 /* HQLStatus.swift */,
+				0D5A54701CEC8F77009DACE4 /* HQLUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -186,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				0D2651A21CE9ECFA000DC2A1 /* HQLHomeTitleButton.swift */,
+				0D5A54741CECA03A009DACE4 /* HQLStatusCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -340,6 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				0DC55DAE1CE70EC6003613FF /* HQLUserAccountViewModel.swift */,
+				0D5A54721CEC9258009DACE4 /* HQLStatusViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -558,10 +570,14 @@
 				0DD738371CE5F21D0002EE51 /* HQLOauthViewController.swift in Sources */,
 				0DDEFB201CE45C2B00723FD0 /* BaseTableViewController.swift in Sources */,
 				0DA74E511CE20BDF003BB9A2 /* HQLTabBarView.swift in Sources */,
+				0D5A54731CEC9258009DACE4 /* HQLStatusViewModel.swift in Sources */,
+				0D5A54751CECA03A009DACE4 /* HQLStatusCell.swift in Sources */,
 				0D4EEDFD1CE89CC700FA74EB /* HQLNewFeatureCell.swift in Sources */,
 				0D554FFC1CE81191004EFDFD /* HQLNewFeatureController.swift in Sources */,
 				0DC55DAC1CE7099E003613FF /* HQLUserAccount.swift in Sources */,
+				0D5A546F1CEC8A03009DACE4 /* HQLStatus.swift in Sources */,
 				0DDEFB221CE4602100723FD0 /* visitorView.swift in Sources */,
+				0D5A54711CEC8F77009DACE4 /* HQLUser.swift in Sources */,
 				0DA74E371CE1C56E003BB9A2 /* MessageController.swift in Sources */,
 				0DA74E2D1CE1C4AB003BB9A2 /* HQLTabBarController.swift in Sources */,
 				0DC55DAF1CE70EC6003613FF /* HQLUserAccountViewModel.swift in Sources */,

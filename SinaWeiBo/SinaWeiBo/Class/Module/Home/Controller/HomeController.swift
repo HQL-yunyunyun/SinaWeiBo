@@ -10,13 +10,36 @@ import UIKit
 
 class HomeController: BaseTableViewController {
 
+    // ==================MARK: - 属性
+    private let reuseIdentifier = "cell"
+    
+    var statuses: [HQLStatus]? {
+        didSet {
+            // 当赋值的时候，就刷新表格
+            self.tableView.reloadData()
+        }
+    }
+    
     // ==================MARK: - 生命周期方法
     override func viewDidLoad() {
         super.viewDidLoad()
         // 设置导航栏
         setupNavigationBar()
+        
+        // 加载数据
+        HQLStatusViewModel.shareInstance.loadStatus { (status, error) in
+            if error != nil{
+                CZPrint(items: error)
+                return
+            }
+            // 请求成功
+            // 将网络请求返回的微博模型赋值给控制器的属性
+            self.statuses = status
+        }
     }
     
+    // ==================MARK: - 私有方法
+    // 设置导航条
     private func setupNavigationBar(){
         // 设置两个button
         navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "navigationbar_friendsearch", target: self, action: #selector(didClickFriendsearch))
@@ -53,5 +76,21 @@ class HomeController: BaseTableViewController {
     }
     @objc private func didClickPop() {
         print("点击了扫一扫")
+    }
+}
+// MARK: - 实现tableview的数据源
+extension HomeController{
+    // 返回cell的数量
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return statuses?.count ?? 0
+    }
+    
+    // cell
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as! HQLStatusCell
+        
+        // 设置cell
+        
+        return cell
     }
 }
