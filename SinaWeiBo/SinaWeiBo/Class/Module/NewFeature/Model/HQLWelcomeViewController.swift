@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import SDWebImage
 
 class HQLWelcomeViewController: UIViewController {
     
@@ -18,6 +19,25 @@ class HQLWelcomeViewController: UIViewController {
         super.viewDidLoad()
         
         self.prepareUI()
+        
+        // 即使头像在本地缓存了图片,刚开始会用占位图片,只有网路请求完成后才会使用SDWebImage设置图片
+        // 解决方法,在获取用户信息之前,也使用SDWebImage去设置一下头像的图片
+        setIcon()
+        
+        // 获取用户信息
+        HQLUserAccountViewModel.shareInstance.loadUserInfo { 
+            self.setIcon()
+        }
+        
+    }
+    
+    // 获取头像
+    private func setIcon(){
+        if let avatar_large = HQLUserAccountViewModel.shareInstance.userAccount?.avatar_large{
+            // 获取到用户数据
+            let url = NSURL(string: avatar_large)
+            self.iconView.sd_setImageWithURL(url, placeholderImage: UIImage(named: "avatar_default_big"))
+        }
     }
     
     // 在这个方法----视图已经显示----这样动画才会动

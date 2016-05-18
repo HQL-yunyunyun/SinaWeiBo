@@ -29,6 +29,12 @@ class HQLUserAccount: NSObject, NSCoding {
      /// 用户标识
     var uid: String?
     
+        /// 用户昵称
+    var screen_name: String?
+    
+        /// 用户头像： 大图 180 * 180
+    var avatar_large: String?
+    
     /**
         构造方法
      */
@@ -61,6 +67,9 @@ class HQLUserAccount: NSObject, NSCoding {
         expires_in = aDecoder.decodeDoubleForKey("expires_in")
         expires_date = aDecoder.decodeObjectForKey("expires_date") as? NSDate
         uid = aDecoder.decodeObjectForKey("uid") as? String
+        
+        screen_name = aDecoder.decodeObjectForKey("screen_name") as? String
+        avatar_large = aDecoder.decodeObjectForKey("avatar_large") as? String
     }
     
     // 归档
@@ -69,6 +78,9 @@ class HQLUserAccount: NSObject, NSCoding {
         aCoder.encodeDouble(expires_in, forKey: "expires_in")
         aCoder.encodeObject(expires_date, forKey: "expires_date")
         aCoder.encodeObject(uid, forKey: "uid")
+        
+        aCoder.encodeObject(screen_name, forKey: "screen_name")
+        aCoder.encodeObject(avatar_large, forKey: "avatar_large")
     }
     
 }

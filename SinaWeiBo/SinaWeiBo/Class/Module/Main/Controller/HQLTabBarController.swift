@@ -71,8 +71,6 @@ class HQLTabBarController: UITabBarController {
         controller.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.orangeColor()], forState: UIControlState.Selected)
         // 包装导航器 swift 可以忽略self
         addChildViewController(UINavigationController(rootViewController: controller))
-        
-        
     }
     
 }

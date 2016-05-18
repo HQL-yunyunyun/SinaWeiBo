@@ -10,86 +10,48 @@ import UIKit
 
 class HomeController: BaseTableViewController {
 
+    // ==================MARK: - 生命周期方法
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        // 设置导航栏
+        setupNavigationBar()
+    }
+    
+    private func setupNavigationBar(){
+        // 设置两个button
+        navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "navigationbar_friendsearch", target: self, action: #selector(didClickFriendsearch))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(imageName: "navigationbar_pop", target: self, action: #selector(didClickPop))
+        
+        // 设置标题按钮
+        let button = HQLHomeTitleButton()
+        // ?? 的作用就是判断前面的值是否为空，如果为空，则等于后面的值
+        let name = HQLUserAccountViewModel.shareInstance.userAccount?.screen_name ?? "未知名称"
+        button.setTitle(name, forState: UIControlState.Normal)
+        button.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+        button.titleLabel?.font = UIFont.systemFontOfSize(16)
+        button.setImage(UIImage(named: "navigationbar_arrow_down"), forState: UIControlState.Normal)
+        button.addTarget(self, action: #selector(didClickTitleView(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        button.sizeToFit()
+        navigationItem.titleView = button
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // ==================MARK: - 点击方法
+    
+    @objc private func didClickTitleView(button: UIButton) {
+        button.selected = !button.selected
+        
+        // 动画
+        UIView.animateWithDuration(0.25) { 
+            let transfrom = button.selected ? CGAffineTransformMakeRotation(CGFloat(M_PI - 0.000001)) : CGAffineTransformIdentity
+            
+            button.imageView?.transform = transfrom
+        }
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    
+    @objc private func didClickFriendsearch() {
+        print("点击了朋友")
     }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+    @objc private func didClickPop() {
+        print("点击了扫一扫")
     }
-
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

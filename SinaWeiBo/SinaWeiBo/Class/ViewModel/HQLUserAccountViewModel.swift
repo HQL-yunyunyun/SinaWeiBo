@@ -13,6 +13,8 @@ class HQLUserAccountViewModel: NSObject {
     
     // viewmodel是mvvc设计模式,将controller中得一些任务分离出来，如视图的数据---网络请求---数据库操作等，让controller专注于处理View布局、交互和动画，把任务剥离，降低整体项目的耦合性。
     
+    // ==================MARK: - 属性 + 方法
+    
     // 来个单例---全局访问
     static let shareInstance: HQLUserAccountViewModel = HQLUserAccountViewModel()
     
@@ -25,6 +27,18 @@ class HQLUserAccountViewModel: NSObject {
     var userAccount: HQLUserAccount?
     
     /**
+        设置一个属性-> 是否登录
+     */
+    var isUserLogin: Bool{
+        get{
+            // 是否登录
+            return userAccount != nil
+        }
+    }
+    
+    // ==================MARK: - 构造方法
+    
+    /**
         构造方法 直接加载账号
      */
     override init() {
@@ -33,7 +47,7 @@ class HQLUserAccountViewModel: NSObject {
         userAccount = loadUserAccount()
     }
     
-    
+    // ==================MARK: - 获取token
     /**
      *  获取token的方法 callback:回调方法
      */
@@ -54,6 +68,13 @@ class HQLUserAccountViewModel: NSObject {
             //获取到数据就把数据保存到沙盒当中
             // 拆包
             // 把respoObject转换成字典
+            /*
+                可选绑定  可选绑定会造成嵌套层次太多
+             if let test = 值? {
+                test 操作
+             }
+             */
+            
             if let result: [String: AnyObject] = responseObject as? [String: AnyObject]{
                 // 开始转换
                 let account = HQLUserAccount(dict: result)
@@ -62,7 +83,7 @@ class HQLUserAccountViewModel: NSObject {
                 self.userAccount = account
                 
                 // 归档
-                NSKeyedArchiver.archiveRootObject(account, toFile: self.userAccountPath)
+                self.saveUserAccount()
                 
                 // 回调
                 callback(error: nil)
@@ -79,6 +100,55 @@ class HQLUserAccountViewModel: NSObject {
                 callback(error: error)
         })
     }
+    
+    // 保存到沙盒当中 保存当前全局的账号
+    private func saveUserAccount(){
+        if let account = userAccount{
+            NSKeyedArchiver.archiveRootObject(account, toFile: self.userAccountPath)
+        }
+    }
+    
+    // ==================MARK: - 获取用户名称和头像
+    func loadUserInfo(loadUserInfoCallBack:() -> ()){
+        // 可选绑定会造成嵌套层次很多, swift提供了另外一种形式,守卫 guard
+        // guard正好相反
+        // 判断token是否有值
+        guard let access_token = userAccount?.access_token else {
+            CZPrint(items: "token没有值")
+            return
+        }
+        guard let uid = userAccount?.uid else {
+            CZPrint(items: "uid没有值")
+            return
+        }
+        // 到这个地方，token和uid都由值
+        let urlString = "2/users/show.json"
+        let parametes = [
+            "access_token": access_token,
+            "uid": uid
+        ]
+        
+        // 请求
+        HQLNetWorkTool.shareInstance.request(RequestMethod.GET, URLString: urlString, parameters: parametes, success: { (_, responseObject) in
+            // 获取信息 转换成字典
+            if let result = responseObject as? [String: AnyObject?]{
+                    let screen_name = result["screen_name"] as? String
+                    let avatar_large = result["avatar_large"] as? String
+                
+                // 赋值到当前账号
+                self.userAccount?.screen_name = screen_name
+                self.userAccount?.avatar_large = avatar_large
+                
+                self.saveUserAccount()
+                loadUserInfoCallBack()
+            }
+            
+            }) { (_, error) in
+                CZPrint(items: "获取用户信息出错:\(error)")
+        }
+    }
+    
+    // ==================MARK: - 解档
     
     /**
      *  解档

@@ -15,6 +15,10 @@ class HQLOauthViewController: UIViewController {
     
     // ==================MARK: - 生命周期方法
     
+    deinit{
+        CZPrint(items: "已经释放")
+    }
+    
     override func loadView() {
         super.loadView()
         self.view = webView
@@ -125,7 +129,13 @@ extension HQLOauthViewController: UIWebViewDelegate{
                     }else{
                         // 没有错误
                         self.close()
-                        CZPrint(items: HQLUserAccountViewModel.shareInstance.userAccount)
+                        // 跳到欢迎界面
+                        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                        
+                        appDelegate.switchRootViewController(HQLNewFeatureController())
+                        // 这里不能用presentViewController
+//                        Warning: Attempt to present <SinaWeiBo.HQLNewFeatureController: 0x7fd961e8c4d0> on <SinaWeiBo.HQLOauthViewController: 0x7fd961e534a0> whose view is not in the window hierarchy!
+//                        self.presentViewController(HQLNewFeatureController(), animated: true, completion: nil)
                     }
                 })
                 return true

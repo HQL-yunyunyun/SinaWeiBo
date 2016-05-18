@@ -12,7 +12,7 @@ class BaseTableViewController: UITableViewController {
 
     
     // MARK: - 属性
-    var isLogin: Bool = false
+    var isLogin: Bool = HQLUserAccountViewModel.shareInstance.isUserLogin
     
     override func viewDidLoad() {
         if isLogin{

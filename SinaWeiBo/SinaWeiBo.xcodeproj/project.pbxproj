@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0D20475F1CE570050061879F /* HQLNetWorkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D20475E1CE570050061879F /* HQLNetWorkTool.swift */; };
+		0D2651A11CE9E941000DC2A1 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2651A01CE9E941000DC2A1 /* UIBarButtonItem+Extension.swift */; };
+		0D2651A31CE9ECFA000DC2A1 /* HQLHomeTitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2651A21CE9ECFA000DC2A1 /* HQLHomeTitleButton.swift */; };
 		0D444C1E1CE17348007E9079 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D444C061CE17348007E9079 /* AppDelegate.swift */; };
 		0D444C1F1CE17348007E9079 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D444C1C1CE17348007E9079 /* Info.plist */; };
 		0D444C201CE17348007E9079 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D444C1D1CE17348007E9079 /* Assets.xcassets */; };
+		0D4EEDFD1CE89CC700FA74EB /* HQLNewFeatureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4EEDFC1CE89CC700FA74EB /* HQLNewFeatureCell.swift */; };
 		0D554FFC1CE81191004EFDFD /* HQLNewFeatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D554FFB1CE81191004EFDFD /* HQLNewFeatureController.swift */; };
 		0DA74E2D1CE1C4AB003BB9A2 /* HQLTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA74E2C1CE1C4AB003BB9A2 /* HQLTabBarController.swift */; };
 		0DA74E331CE1C52B003BB9A2 /* DiscoveryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA74E321CE1C52B003BB9A2 /* DiscoveryController.swift */; };
@@ -30,10 +33,13 @@
 
 /* Begin PBXFileReference section */
 		0D20475E1CE570050061879F /* HQLNetWorkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQLNetWorkTool.swift; sourceTree = "<group>"; };
+		0D2651A01CE9E941000DC2A1 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		0D2651A21CE9ECFA000DC2A1 /* HQLHomeTitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQLHomeTitleButton.swift; sourceTree = "<group>"; };
 		0D444C061CE17348007E9079 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D444C1C1CE17348007E9079 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D444C1D1CE17348007E9079 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D47A4E21CE16E9C00D8C33A /* SinaWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SinaWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D4EEDFC1CE89CC700FA74EB /* HQLNewFeatureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQLNewFeatureCell.swift; sourceTree = "<group>"; };
 		0D554FFB1CE81191004EFDFD /* HQLNewFeatureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQLNewFeatureController.swift; sourceTree = "<group>"; };
 		0DA74E2C1CE1C4AB003BB9A2 /* HQLTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HQLTabBarController.swift; sourceTree = "<group>"; };
 		0DA74E321CE1C52B003BB9A2 /* DiscoveryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryController.swift; sourceTree = "<group>"; };
@@ -83,6 +89,7 @@
 		0D444C051CE17348007E9079 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				0D2651A01CE9E941000DC2A1 /* UIBarButtonItem+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -178,6 +185,7 @@
 		0D444C111CE17348007E9079 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0D2651A21CE9ECFA000DC2A1 /* HQLHomeTitleButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -366,6 +374,7 @@
 		0DC55DB31CE724CF003613FF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0D4EEDFC1CE89CC700FA74EB /* HQLNewFeatureCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -545,9 +554,11 @@
 				0DF3D7341CE4B78B005E6F67 /* HQLConsant.swift in Sources */,
 				0DA74E331CE1C52B003BB9A2 /* DiscoveryController.swift in Sources */,
 				0D444C1E1CE17348007E9079 /* AppDelegate.swift in Sources */,
+				0D2651A31CE9ECFA000DC2A1 /* HQLHomeTitleButton.swift in Sources */,
 				0DD738371CE5F21D0002EE51 /* HQLOauthViewController.swift in Sources */,
 				0DDEFB201CE45C2B00723FD0 /* BaseTableViewController.swift in Sources */,
 				0DA74E511CE20BDF003BB9A2 /* HQLTabBarView.swift in Sources */,
+				0D4EEDFD1CE89CC700FA74EB /* HQLNewFeatureCell.swift in Sources */,
 				0D554FFC1CE81191004EFDFD /* HQLNewFeatureController.swift in Sources */,
 				0DC55DAC1CE7099E003613FF /* HQLUserAccount.swift in Sources */,
 				0DDEFB221CE4602100723FD0 /* visitorView.swift in Sources */,
@@ -556,6 +567,7 @@
 				0DC55DAF1CE70EC6003613FF /* HQLUserAccountViewModel.swift in Sources */,
 				0DA74E351CE1C55D003BB9A2 /* HomeController.swift in Sources */,
 				0DA74E391CE1C57E003BB9A2 /* ProfileController.swift in Sources */,
+				0D2651A11CE9E941000DC2A1 /* UIBarButtonItem+Extension.swift in Sources */,
 				0DC55DB51CE72573003613FF /* HQLWelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

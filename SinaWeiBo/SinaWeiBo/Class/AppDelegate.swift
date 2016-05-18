@@ -16,21 +16,62 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        UIScreen.mainScreen().bounds
+        /**
+           逻辑判断: 是登录-> 登录-> 欢迎界面-> 是新版本-> 新版本
+                                            不是新版本-> 首页
+                    没有登录-> 登录页面
+         */
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        
         // 给navigation设置皮肤
         setupAppearance()
-        
-        let tabBarVC = HQLTabBarController()
-        tabBarVC.view.backgroundColor = UIColor.whiteColor()
-        
-        window?.rootViewController = tabBarVC
-        
-        
+        // 设置控制器
+        window?.rootViewController = defaultViewController()
         window?.makeKeyAndVisible()
-        
         return true
+    }
+    
+    //判断是否登录
+    private func defaultViewController() -> UIViewController{
+        if !HQLUserAccountViewModel.shareInstance.isUserLogin {
+            // 没有登录
+            return HQLTabBarController()
+        }
+        // 到这里已经是登录了
+        if isNewVersion(){
+          // 是新版本
+            return HQLNewFeatureController()
+        }else{
+            // 不是新版本
+            return HQLWelcomeViewController()
+        }
+        
+    }
+    
+    
+    
+    // 判断是否为新版本
+    private func isNewVersion() -> Bool{
+        
+        // 把新版本的信息写到Preferences
+        
+        // 获取当前版本
+        let currentVersion = NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"] as! String
+        
+        // 获取上一个版本
+        let sandboxVersionkey = "sandboxVersionkey"
+        let sandboxVersion = NSUserDefaults.standardUserDefaults().stringForKey(sandboxVersionkey)
+        
+        // 比较 只要不相同就认为是新的版本号
+        let isNewVersion = currentVersion != sandboxVersion
+        
+        // 如果是新版本保存到沙盒中
+        if isNewVersion{
+            // 保存到沙盒中
+            NSUserDefaults.standardUserDefaults().setObject(currentVersion, forKey: sandboxVersionkey)
+            // 同步
+            NSUserDefaults.standardUserDefaults().synchronize()
+        }
+        return isNewVersion
     }
     
     /// 让别人来切换window的根控制器
